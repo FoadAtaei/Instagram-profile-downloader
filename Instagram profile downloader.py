@@ -1,4 +1,10 @@
+import instaloader
+import urllib
+import io
 from tkinter import *
+from urllib.request import urlopen
+from PIL import Image, ImageTk
+
 
 window = Tk()
 window.title("Instagram Profile Downloader")
