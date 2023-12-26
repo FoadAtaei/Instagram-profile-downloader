@@ -5,6 +5,7 @@ from tkinter import *
 from urllib.request import urlopen
 from PIL import Image, ImageTk
 
+
 def get_image():
     loader = instaloader.Instaloader()
     profile = instaloader.Profile.from_username(loader.context, f"{username.get()}")
@@ -26,5 +27,6 @@ username = Entry(window, width=30)
 username.pack()
 button = Button(window, width=20, text="Start downloading...")
 button.pack()
+button.config(command=get_image)
 label = Label(window)
 window.mainloop()
